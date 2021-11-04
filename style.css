@@ -1,6 +1,8 @@
-body { font-family: Verdana, Arial, sans-serif;
+body { font-family: "Times New Roman", Times, serif;
+    font-style: normal;
     height: 100%;
     background-color: #000000;
+    
 }
 
 a:link {color: white}
@@ -190,7 +192,7 @@ footer {
 
 
 #moviep {
-  font-family: Verdana, Arial, sans-serif;
+  font-family:"Times New Roman", Times, serif;;
   text-align: left;
   font-size: small;
   font-weight: lighter;
