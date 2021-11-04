@@ -28,6 +28,14 @@ a:hover { color: #610094}
 
 #home:hover {opacity: 0.7;}
 
+#gmap {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#gmap:hover {opacity: 0.7;}
+
 #leftheader {
     float: left;
     display: inline;
