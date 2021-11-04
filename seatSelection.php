@@ -31,10 +31,26 @@ if (isset($_GET[id])){
     $resultMovie = $db -> query($queryMovie);
     $rowNumMovie = $resultMovie->num_rows;
     $arrayMovie = array();
-    for ($i=0; $i < $rowNum; $i++){
+    for ($i=0; $i < $rowNumMovie; $i++){
         $rowMovie = $resultMovie -> fetch_assoc();
         array_push($arrayMovie, $rowMovie);
     }
+
+    $queryAvail = "SELECT seatNumber, availability FROM seatsTable WHERE slotID=$test";
+    $resultAvail = $db -> query($queryAvail);
+    $rowNumAvail = $resultAvail->num_rows;
+    $arrayRes = array();
+    for ($i=0; $i < $rowNumAvail; $i++){
+        $rowAvail = $resultAvail -> fetch_assoc();
+        array_push($arrayRes, $rowAvail);
+    }
+    // print_r($arrayRes);
+
+    $arrayAvail = array();
+    foreach ($arrayRes as $key => $value) {
+        $arrayAvail += array($value['seatNumber'] => $value['availability']);
+    }
+    // print_r($arrayAvail);
 }
 ?>
 
@@ -93,8 +109,25 @@ if (isset($_GET[id])){
         <div>
             <div class="theatre">
                 <div class="screen"></div>
-                
-                <form action="payment.php" method="post">       
+                <form action="payment.php" method="post">
+                    <?php
+                        $rowlength = 7;
+                        $rowmapping = ['A','B','C'];
+                        foreach($rowmapping as $row){
+                            echo '<div class="seatRow">';
+                                for ($i = 0; $i<$rowlength; $i++){
+                                    $seatname = $row.($i+1);
+                                    $classname = "sold";
+                                    if ($arrayAvail[$seatname] == "Yes"){
+                                        $classname = "avail";
+                                    }
+                                    echo ' <input type="button" value ="'.$seatname.'" class="seat '.$classname.'" id="'.$seatname.'" onclick="updateSelectedSeat(\''.$seatname.'\')">';
+                                }
+                            echo '</div>';
+                        }
+                    ?>
+
+                <!-- <form action="payment.php" method="post">
                 <div class="seatRow">
                     <input type="button" value ="A1" class="seat" id="A1" onclick="updateSelectedSeat('A1')">
                     <input type="button" value ="A2" class="seat" id="A2" onclick="updateSelectedSeat('A2')">
@@ -124,7 +157,7 @@ if (isset($_GET[id])){
                     <input type="button" value ="C5" class="seat" id="C5" onclick="updateSelectedSeat('C5')">
                     <input type="button" value ="C6" class="seat" id="C6" onclick="updateSelectedSeat('C6')">
                     <input type="button" value ="C7" class="seat" id="C7" onclick="updateSelectedSeat('C7')">
-                </div>
+                </div> -->
 
                 <div class="exit">Exit</div>
                 </div>

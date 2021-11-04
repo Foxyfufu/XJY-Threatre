@@ -63,7 +63,7 @@
                     </tr>
                     <tr>
                         <th><strong><a href="movie1.html">Marvel Studios: Avengers Infinity
-                                    War</a></strong><br>(Sub:Chinese)<br>image
+                                    War</a></strong><br>(Sub:Chinese)<br>
                         </th>
                         <td>
                             <div class="tabcontent today">
@@ -117,7 +117,7 @@
                     </tr>
                     <tr>
                         <th><strong><a href="movie2.html">Joker
-                                </a></strong><br>(Sub:Chinese)<br>image
+                                </a></strong><br>(Sub:Chinese)<br>
                         </th>
                         <td>
                             <div class="tabcontent today">
@@ -172,7 +172,7 @@
                     </tr>
                     <tr>
                         <th><strong><a href="movie3.html">Blackpink the Movie
-                                </a></strong><br>(Sub:Chinese)<br>image
+                                </a></strong><br>(Sub:Chinese)<br>
                         </th>
                         <td>
                             <div class="tabcontent today">

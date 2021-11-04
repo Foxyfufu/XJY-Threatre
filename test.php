@@ -13,26 +13,33 @@
             $row = $result -> fetch_assoc();
             array_push($array,$row);
         }
-
+        // print_r($array);
+        $seatArray = ['A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'B1', 'B2', 'B3', 'B4', 'B5', 'B6', 'B7', 'C1', 'C2', 'C3', 'C4', 'C5', 'C6', 'C7'];
         foreach ($array as $key => $value) {
-            $movieAvangers = array();
-            $movieJoker = array();
-            $movieBP = array();
-            $bpToday = array();
-            if ($array[$key]['movieID'] == "1") {
-                array_push($movieAvangers, $value);
-               
-            }
-            elseif ($array[$key]['movieID'] == "2") {
-                array_push($movieJoker, $value);
-            }
-            elseif ($array[$key]['movieID'] == "3") {
-                array_push($movieBP, $value);
-                if ($movieBP['date'] == 'today') {
-                    array_push($bpToday, $value);
-                }
+            // print_r($value);
+        
+            foreach ($seatArray as $seat) {
+                echo $seat."\n";
+                $query = "INSERT INTO seatsTable values
+                 (null, ".$array[$key]['slotID'].", '".$seat."', 'Yes')";
+            $result = $db -> query($query);
             }
         }
-    ?>
+        // 
+                
+        //     }
+        // }
 
-    <input type="hidden" value ="<?php echo $slotId ;?>"  name="slotId">
+            // -- // insert query results
+            // -- if ($result) {
+            // --     // Get the last index in the log to be assigned the order_id, push order into orders-details
+            // --     $queryLastIndex = "SELECT MAX( transID ) FROM `transTable`;";
+            // --     // echo $queryLastIndex;
+            // --     $lastIndex = $db->query($queryLastIndex);
+            // --     $row = $lastIndex->fetch_assoc();
+            // --     $lastIndex = $row['MAX( transID )'];
+            // --     // echo ( $lastIndex);
+            // -- }
+            // -- print_r($value);
+        
+    ?>

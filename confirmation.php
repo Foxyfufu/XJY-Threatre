@@ -14,7 +14,6 @@ $customerAddress=$_POST['customerAddress'];
 $confirmSlot = $_SESSION['selectedSlot'];
 $confirmSeats = $_SESSION['selectedSeats'];
 $confirmSeatsArray = explode(",", $confirmSeats);
-// print_r($confirmSeatsArray);
 
 @ $db = new mysqli('localhost','f32ee','f32ee','f32ee');
 if(mysqli_connect_errno()){
@@ -41,9 +40,19 @@ echo "An error has occurred.  The item was not added.";
 }
 
 foreach ($confirmSeatsArray as $key => $value) {
-    $queryUpdate = "UPDATE seatsTable SET availability='No' WHERE slotID=$confirmSlot AND seatNumber=$confirmSeatsArray";
+    $queryUpdate = "UPDATE seatsTable SET availability='No' WHERE slotID=$confirmSlot AND seatNumber=\"$confirmSeatsArray[$key]\"";
     $resultUpdate = $db -> query($queryUpdate);
 }
+// $to      = 'f32ee@localhost';
+//     $subject = 'Order Confirmed!';
+//     $message = "Thank you for choosing XJY Threatre. Please show this E-Ticket to our staff on the day of the movie.
+//     \nName: {$???} \nMovie Name: {$???} \n Date: {$???} \n Seat Number: {$???}
+//     \nWe look forward to seeing you."
+//     $headers = 'From: f32ee@localhost' . "\r\n" .
+//         'Reply-To: f32ee@localhost' . "\r\n" .
+//         'X-Mailer: PHP/' . phpversion();
+
+//     mail($to, $subject, $message, $headers,'-ff32ee@localhost');
 ?>
 
 
