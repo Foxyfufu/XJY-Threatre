@@ -1,0 +1,639 @@
+body { font-family: Verdana, Arial, sans-serif;
+    height: 100%;
+    background-color: #000000;
+}
+
+a:link {color: #FFFFFF; }
+a:active {color: #150050}
+a:hover { color: #610094}
+
+#wrapper {
+    width: 80%;
+    margin: auto;
+    min-width: 1300px;
+    color: #FFFFFF;
+  }
+
+#title {
+    /* display: flex; */
+    height: 120px;
+    border: 1px solid #000000
+}
+
+#leftheader {
+    float: left;
+    display: inline;
+    height: 100%;
+    width: 30%;
+    background-color: #000000
+}
+
+#logo {
+    display: block;
+    margin-top: 30px;
+    margin-bottom: auto;
+    margin-left: 0;
+    margin-right: auto;
+    width: 50%;
+}
+
+#rightheader {
+    display: inline;
+    text-align: center;
+    width: 70%;
+    height: 100%;
+    float: right;
+}
+
+#nav {
+    margin-top: 50px;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    font-weight: bolder;
+    font-size: larger;
+}
+
+#nav a {
+    text-decoration: none;
+    width: 50%;
+    
+}
+
+#nav a+a {
+    margin-left: 40px;
+  }
+
+#intro {
+    display: block;
+    text-align: center;
+    padding: 50px 50px 0px 50px;
+    height: 150px;
+    border-bottom: 1px solid #000000;
+    border-left: 1px solid #000000;
+    border-right: 1px solid #000000;
+}
+
+#movieheader {
+  display: block;
+  text-align: left;
+  height: 80px;
+  border-bottom: 1px solid #FFFFFF;
+}
+
+#map {
+    display: inline-block;
+}
+
+footer { 
+    clear: right; 
+    background-color: #000000; 
+    padding: 10px 20px 20px 20px; 
+    color: #FFFFFF; 
+    border: 1px solid #000000
+}
+
+#cc {
+  float: right;
+}
+
+#copyright {
+  display: block;
+  text-align: center;
+}
+
+#columns {
+    display: flex;
+    border-bottom: 1px solid #000000;
+    border-left: 1px solid #000000;
+    border-right: 1px solid #000000;
+}
+
+#leftcolumn {
+    width: 50%;
+    display: block;
+    margin: auto;
+    padding: 50px 50px 50px 0px;
+}
+
+#rightcolumn {
+    float: right;
+    width: 50%;
+    display: flex;
+    text-align: center;
+    display: inline;
+    padding: 100px 0px;
+    font-size: small;
+}
+
+#leftmovie {
+  width: 35%;
+  display: block;
+  padding: 0 50px 50px 0px;
+  position: relative;
+}
+
+.mainPoster {
+  width: 100%;
+  margin-top: 20px;
+}
+
+#rightmovie {
+  float: right;
+  width: 65%;
+  display: flex;
+  text-align: center;
+  display: inline;
+  padding: 50px 0px;
+}
+
+#body2 {
+    display: flex;
+    flex-direction: column;
+    height: 1500px;
+}
+
+#body3 {
+  display: flex;
+  flex-direction: column;
+  height: 1000px;
+}
+
+#body4 {
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+}
+
+#body5 {
+  display: flex;
+  flex-direction: column;
+  height: 700px;
+}
+
+
+#moviep {
+  font-family: Verdana, Arial, sans-serif;
+  text-align: left;
+  font-size: small;
+  font-weight: lighter;
+  color: #FFFFFF;
+}
+
+h1 {
+  font-family: Verdana, Arial, sans-serif;
+  font-size: small;
+  font-weight: lighter;
+  color: #FFFFFF;
+}
+
+h2 {
+  font-family: Verdana, Arial, sans-serif;
+  font-size: small;
+  font-weight: lighter;
+  color: #FFFFFF;
+}
+
+h3 {
+  font-family: Verdana, Arial, sans-serif;
+  font-size: larger;
+  font-weight: bold;
+  color: #FFFFFF;
+}
+
+h4 {
+  font-family: Verdana, Arial, sans-serif;
+  font-weight: bolder;
+  color: #FFFFFF;
+  text-align: left;
+}
+
+h5 {
+  font-family: Verdana, Arial, sans-serif;
+  font-weight: bolder;
+  font-size: larger;
+  color: #FFFFFF;
+  text-align: left;
+}
+
+.column2 table {
+  border-collapse: separate;
+  border-spacing:0px 10px;
+  width: 100%;
+  border-style: none;
+}
+
+.column2 th{
+  text-align:left;
+  vertical-align: top;
+  font-size: small;
+  font-weight: lighter;
+  color: #717171;
+  width: 25%;
+}
+
+.column2 td {
+  text-align: left;
+  font-size: small;
+  font-weight: lighter;
+  padding-left: 10px;
+  width:75%;
+}
+
+.row3 table{
+  border-collapse: separate;
+  border-spacing: 0px 20px;
+  width: 100%;
+  border:#000000;
+}
+
+
+
+.row3 th{
+  text-align:left;
+  font-size:medium;
+  font-weight:bold;
+  color: #FFFFFF;
+  width: 41%;
+}
+
+.row3 td {
+  text-align: left;
+  font-size: small;
+  font-weight: lighter;
+  padding-left: 10px;
+  vertical-align: top;
+}
+
+.row3 a:link {color:yellow; }
+.row3 a:visited {color:yellow; }
+.row3 a:hover { color: white}
+
+
+/*#topcolumn {
+    display: block;
+    width:  100%;
+    height: 65%;
+    border-bottom: 1px solid #000000;
+    border-left: 1px solid #000000;
+    border-right: 1px solid #000000;
+}
+
+#bottomcolumn {
+    display: block;
+    width:  100%;
+    height: 35%;
+    border-bottom: 1px solid #000000;
+    border-left: 1px solid #000000;
+    border-right: 1px solid #000000;
+}
+*/
+.row {
+    display: table-row;
+}
+  
+.row:nth-child(1) {
+    height: 65%;
+    width: 100%;
+    border-bottom: 1px solid #000000;
+    border-left: 1px solid #000000;
+    border-right: 1px solid #000000;
+}
+  
+.row:nth-child(2) {
+    width: 100%;
+    border-bottom: 1px solid #000000;
+    border-left: 1px solid #000000;
+    border-right: 1px solid #000000;
+}
+
+.column2 {
+  float: left;
+  width: 50%;
+}
+
+.row2::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.row3 {
+  display: table-row;
+}
+.row3:nth-child() {
+  height: 30%;
+  width: 100%;
+  margin-top: 50px;
+}
+
+
+
+#poster{
+  width: 100%;
+  margin-bottom: 75px;
+
+}
+
+
+#postermovie{
+  display: flex;
+  justify-content: left;
+  position: relative;
+}
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons 
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right 
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* Payment Page */
+
+.paymentHeader {
+  font-size: x-large;
+  width: 80%;
+  margin-left: 10%;
+  color:#3F0071;
+}
+
+#computePrice {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+}
+
+#computePrice td {
+  width: 25%;
+  text-align: center;
+  font-size: medium;
+}
+
+#computePrice th {
+  width: 25%;
+  text-align: center;
+  font-size: medium;
+  color: white;
+}
+
+.paymentLabel {
+  display: inline-block;
+  width: 120px;
+  text-align: right;
+  margin-right: 30px;
+  margin-bottom: 10px;
+}
+
+#paymentInfo {
+  margin-left: 15%;
+}
+
+#paymentDescription{
+  margin-left: 15%;
+  font-size: small;
+}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #000000;
+  background-color: #000000;
+
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border-style: none;
+  background-color: #444451;
+  outline:#fff;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active{
+  background:#ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  border-top: none;
+}
+
+.tabcontent.show {
+	display: block;
+}
+
+.button {
+  padding: 15px 25px;
+  font-size: 12px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #FFFFFF;
+  background-color:#444451;
+  border: none;
+  border-radius: 15px;
+}
+
+.button:hover {background-color: #aaa}
+
+.button:active {
+  background-color:#ccc;
+  transform: translateY(2px);
+}
+
+/* Seat Selection Page */
+#seatDescription {
+  display: block;
+  font-size: large;
+  margin-left: 50px;
+}
+
+#seatLegend {
+  width: 70px;
+  margin-left: 50px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: white;
+  list-style-type: none;
+  display: flex;
+}
+
+#seatLegend li {
+  display: flex;
+  align-items: center;
+  margin: 0 10px;
+}
+
+#seatLegend li small {
+  margin-left: 2px;
+}
+
+.seat {
+  background-color: white;
+  height: 26px;
+  width: 32px;
+  margin: 3px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.seat:nth-of-type(2) {
+  margin-right: 18px;
+}
+
+.seat:nth-last-of-type(2) {
+  margin-left: 18px;
+}
+
+.seat.selected {
+background-color: #610094;
+}
+
+.seat.sold {
+  background-color: #444451;
+}
+
+.theatre {
+  display: inline-block;
+  margin-left: 50px;
+  margin-bottom: 30px;
+  border-style: solid;
+  border-color: #FFFFFF;
+  width: 70%;
+}
+
+.exit{
+  background-color: #FFFFFF;
+  height: 30px;
+  width: 100px;
+  margin: 0px 0px 20px 50px;
+  color: black;
+  text-align: center;
+}
+
+.screen {
+  background-color: #fff;
+  height: 30px;
+  width: 80%;
+  margin: 30px 0px 130px;
+  box-shadow: 0 3px 10px rgba(255, 255, 255, 0.7);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.seatRow {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.seat:not(.sold):hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+#seatLegend .seat:not(.sold):hover {
+  cursor: default;
+  transform: scale(1);
+}
+
+#seatLegend .double:not(.sold):hover {
+  cursor: default;
+  transform: scale(1);
+}
+
+#confirm {
+  /* float: right; */
+  height: 483px;
+  display: inline;
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>XJY Theatre</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="wrapper">
+        <header>
+            <div id="title">
+                <div id="leftheader">
+                    <div id="logo">
+                        <a href="index.html"><img src="assets/logo.png" alt="home" height="50px" ;>
+                    </div>
+                </div>
+
+                <div id="rightheader">
+                    <div id="nav">
+                        <a href="movies.html">Showing Now / Coming Soon</a>
+                        <a href="tickets.php">Buy Tickets</a>
+                        <a href="locate.html">Locate / Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div id="body3">
+            <h1><u> Now Showing </u></h1>
+
+            <div class="row">
+                <div id="poster">
+                    <a href="movie1.html"><img class="center" src="assets/marvel.jpg" height="500px"></a>
+                    <a href="movie2.html"><img class="center" src="assets/joker.jpg" height="500px"></a>
+                    <a href="movie3.html"><img class="center" src="assets/bp.jpg" height="500px"></a>
+                </div>
+            </div>
+
+            <h2><u> Coming Soon </u></h2>
+
+            <div class="row">
+                <div id="poster">
+                    <img class="center" src="assets/sponge.jpg" height="200px">
+                    <img class="center" src="assets/wakanda.jpg" height="200px">
+                    <img class="center" src="assets/strange.jpg" height="200px">
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div id="copyright">
+                <small><i>Copyright &copy; XJY Theatre</i></small><br>
+                <small><i><a href="mailto:XinJie@Lin.com">XJYTheatre@XJY.com</a></i></small>
+            </div>
+            <div id="cc">
+                <img src="assets/ccicons.png" height="20px" ;>
+            </div>
+        </footer>
+    </div>
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
+</body>
+
+</html>
