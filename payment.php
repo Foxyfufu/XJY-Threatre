@@ -98,9 +98,9 @@
 
                     <tr>
                         <td>Standard Ticket</td>
-                        <td>$17</td>
-                        <td><?php echo $pricePayment; ?></td>
                         <td><?php echo count($specificArray); ?></td>
+                        <td>$17</td>
+                        <td>$<?php echo $pricePayment; ?></td>
                     </tr>
 
                     <tr>
@@ -110,7 +110,7 @@
 
                     <tr>
                         <td colspan = "3" style="text-align: right">Grand Total:</td>
-                        <td><?php echo $totalPayment; ?></td>
+                        <td>$<?php echo $totalPayment; ?></td>
                     </tr>
                 </table>
             </div>
@@ -120,11 +120,11 @@
             </div>
 
             <div>
-                <form method="post" action="show_get.php" id="paymentInfo">
+                <form method="post" action="confirmation.php" id="paymentInfo">
                     <label class="paymentLabel">Name:</label>
                     <input
                     type="text" 
-                    id="name" 
+                    name="customerName" 
                     required
                     style="width:300px">
                     <br><br>
@@ -132,7 +132,7 @@
                     <label class="paymentLabel">E-mail:</label>
                     <input
                     type="email" 
-                    id="email" 
+                    name="customerEmail" 
                     required
                     style="width:300px">
                     <br><br>
@@ -140,7 +140,7 @@
                     <label class="paymentLabel">Mobile Number:</label>
                     <input
                     type="text" 
-                    id="mobileNumber" 
+                    name="customerNumber" 
                     required
                     style="width:150px"
                     pattern="\d*"
@@ -150,10 +150,9 @@
                     <label class="paymentLabel">Address:</label>
                     <input
                     type="text" 
-                    id="address" 
+                    name="customerAddress" 
                     required
-                    style="width:200px"
-                    pattern="\d*">
+                    style="width:200px">
                     <br><br>
 
                     <input type="reset" id="clear" value="Cancel">
@@ -173,6 +172,6 @@
             </div>
         </footer>
     </div>
-    <script src="payment.js"></script>
+    <!-- <script src="payment.js"></script> -->
 </body>
 </html>

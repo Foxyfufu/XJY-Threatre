@@ -2,14 +2,13 @@
 session_start();
 $id = session_id();
 
-if (isset($_GET['id'])){
-    $slotId  = $_GET['id'];
-    // echo $slotId;   
+if (isset($_GET[id])){
+    $slotId  = $_GET[id];
 
     // if (!isset($_SESSION['selectedSlot'])) {
         $_SESSION['selectedSlot'] = $slotId;
         $test = $_SESSION['selectedSlot'];
-        echo $test;
+        // echo $test;
     // }
         
     @ $db = new mysqli('localhost', 'f32ee', 'f32ee', 'f32ee');
@@ -36,16 +35,6 @@ if (isset($_GET['id'])){
         $rowMovie = $resultMovie -> fetch_assoc();
         array_push($arrayMovie, $rowMovie);
     }
-
-    // $queryAvail="SELECT seatNumber, availability FROM seatsTable WHERE slotID=$slotId";
-    // $resultAvail = $db -> query($queryAvail);
-    // $rowNumAvail = $resultAvail -> num_rows;
-    // $arrayAvail = array();
-    // for ($i=0; $i < $rowNum; $i++){
-    //     $rowAvail = $resultAvail -> fetch_assoc();
-    //     array_push($arrayAvail, $rowAvail);
-    // }
-    // print_r($arrayMovie);
 }
 ?>
 

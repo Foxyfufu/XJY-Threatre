@@ -25,5 +25,5 @@ function openCity(evt, cityName) {
 document.getElementById("defaultOpen").click();
 
 function seatSelection(id) {
-    document.location.href="seatSelection.php?id='"+id+"'";
+    document.location.href="seatSelection.php?id="+id+"";
 }

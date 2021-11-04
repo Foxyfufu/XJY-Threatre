@@ -20,8 +20,9 @@ create table seatsTable
 create table transTable
 ( `transID` int unsigned not null auto_increment primary key,
   `name` text not null,
-  `number` char(8) not null,
   `email` text not null,
-  `seatID` int not null,
-  `amount` decimal(10,2) not null
+  `number` char(8) not null,
+  `address` text not null,
+  `slotID` int not null,
+  `seatID` int not null
 );
