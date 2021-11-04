@@ -13,7 +13,7 @@
             <div id="title">
                 <div id="leftheader">
                     <div id="logo">
-                        <a href="index.html"><img src="assets/logo.png" alt="home" height="50px" ;>
+                        <a href="index.html"><img id="home" src="assets/logo.png" alt="home" height="50px" ;>
                     </div>
                 </div>
 
@@ -61,11 +61,20 @@
                 </div>
             </div>
             <div class="row">
-                <div id="poster">
-                    <img src="assets/promo 2.jpg" class="center" height=250px>
-                    <img src="assets/promo 1.jpg" class="center" height=250px%>
-                    <img src="assets/promo 3.jpg" class="center" height=250px%>
+                <div id="poster2">
+                    <img id="myImg" src=" assets/promo 2.jpg" class="center" height=250px>
+                    <img id="myImg2" src="assets/promo 1.jpg" class="center" height=250px>
+                    <img id="myImg3" src="assets/promo 3.jpg" class="center" height=250px>
                 </div>
+
+                <!-- The Modal -->
+                <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img01">
+                    <div id="caption"></div>
+                </div>
+
+
             </div>
         </div>
 
@@ -79,22 +88,7 @@
             </div>
         </footer>
     </div>
-    <script>
-        var slideIndex = 0;
-        showSlides();
-        function showSlides() {
-            var i;
-            var slides = document.getElementsByClassName("mySlides");
-            var dots = document.getElementsByClassName("dot");
-            for (i = 0; i < slides.length; i++) { slides[i].style.display = "none"; }
-            slideIndex++;
-            if (slideIndex > slides.length) { slideIndex = 1 }
-            for (i = 0; i < dots.length; i++) { dots[i].className = dots[i].className.replace(" active", ""); }
-            slides[slideIndex - 1].style.display = "block";
-            dots[slideIndex - 1].className += " active";
-            setTimeout(showSlides, 4000); // Change image every 4 seconds
-        }
-    </script>
+    <script src="index.js"></script>
 </body>
 
 </html>
