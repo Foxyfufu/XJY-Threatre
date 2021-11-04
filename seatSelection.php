@@ -53,7 +53,7 @@ if (isset($_GET[id])){
             <div id="title">
                 <div id="leftheader">
                     <div id="logo">
-                        <a href="index.html"><img src="assets/logo.png" alt="home" height="50px" ;>
+                        <a href="index.html"><img id = "home" src="assets/logo.png" alt="home" height="50px" ;>
                     </div>
                 </div>
 

@@ -13,7 +13,7 @@
             <div id="title">
                 <div id="leftheader">
                     <div id="logo">
-                        <a href="index.html"><img src="assets/logo.png" alt="home" height="50px" ;>
+                        <a href="index.html"><img id="home" src="assets/logo.png" alt="home" height="50px" ;>
                     </div>
                 </div>
 
@@ -42,10 +42,17 @@
             <div id="rightmovie">
                 <h4>Photos</h4>
                 <div id="postermovie">
-                    <img class="left" src="assets/marvel.jpg" height="200px">&nbsp;&nbsp;&nbsp;&nbsp;
-                    <img class="left" src="assets/joker.jpg" height="200px">&nbsp;&nbsp;&nbsp;&nbsp;
-                    <img class="left" src="assets/bp.jpg" height="200px">
+                    <img id="movie" class="left" src="assets/bp1.jpg" height="130px">&nbsp;&nbsp;&nbsp;&nbsp;
+                    <img id="movie2" class="left" src="assets/bp2.jpg" height="130px">&nbsp;&nbsp;&nbsp;&nbsp;
+                    <img id="movie3" class="left" src="assets/bp3.jpg" height="130px">
                 </div>
+                <!-- The Modal -->
+                <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img01">
+                    <div id="caption"></div>
+                </div>
+
                 <h4>Details</h4>
                 <div class="row2">
                     <div class="column2">
@@ -116,6 +123,7 @@
     </div>
 </footer>
 </div>
+<script src="movie.js"></script>
 </body>
 
 </html>

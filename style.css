@@ -1,10 +1,13 @@
-body { font-family: Verdana, Arial, sans-serif;
+body { font-family: "Times New Roman", Times, serif;
+    font-style: normal;
     height: 100%;
     background-color: #000000;
+    
 }
 
-a:link {color: #FFFFFF; }
-a:active {color: #150050}
+a:link {color: white}
+a:visited{color: white}
+a:active {color: #610094}
 a:hover { color: #610094}
 
 #wrapper {
@@ -19,6 +22,22 @@ a:hover { color: #610094}
     height: 120px;
     border: 1px solid #000000
 }
+
+#home {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#home:hover {opacity: 0.7;}
+
+#gmap {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#gmap:hover {opacity: 0.7;}
 
 #leftheader {
     float: left;
@@ -173,7 +192,7 @@ footer {
 
 
 #moviep {
-  font-family: Verdana, Arial, sans-serif;
+  font-family:"Times New Roman", Times, serif;;
   text-align: left;
   font-size: small;
   font-weight: lighter;
@@ -327,13 +346,179 @@ h5 {
   margin-top: 50px;
 }
 
-
-
 #poster{
   width: 100%;
   margin-bottom: 75px;
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+}
+
+#marvel {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#marvel:hover {opacity: 0.7;}
+
+#joker {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#joker:hover {opacity: 0.7;}
+
+#bp {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#bp:hover {opacity: 0.7;}
+
+#movie {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.1s;
+}
+
+#movie:hover {
+  opacity: 0.7;
+  border: 2px solid yellow
+}
+
+#movie2 {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.1s;
+}
+
+#movie2:hover {
+  opacity: 0.7;
+  border: 2px solid yellow
+}
+
+
+#movie3 {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.1s;
+}
+
+#movie3:hover {
+  opacity: 0.7;
+  border: 2px solid yellow
+}
+
+
+
+
+#poster2{
+  width: 100%;
+  margin: 50px 0px 75px 0px;
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
 
 }
+
+#myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+#myImg2 {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg2:hover {opacity: 0.7;}
+
+#myImg3 {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg3:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 100%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 
 
 #postermovie{
