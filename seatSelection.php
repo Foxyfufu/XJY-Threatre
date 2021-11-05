@@ -86,7 +86,7 @@ if (isset($_GET[id])){
         <div id="seatHeader">
             <div id="seatDescription">
                 <span><b> <?php echo $arrayMovie[0]['movieName']; ?> <br>
-                <span><b> <?php echo $array[0]['day']; echo $array[0]['time']; ?> <br>
+                <span><b> <?php echo $array[0]['day']; echo "&nbsp"; echo $array[0]['time']; ?> <br>
                 <span><b>Please select your seats</b></span>
             </div>
             

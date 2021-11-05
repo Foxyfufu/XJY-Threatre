@@ -41,8 +41,8 @@
                 </div>
             </div>
         </header>
-        <h1>Please click on your preferred show time or select a date. Show times in grey indicates that tickets
-            sold out.</h1>
+        <h1>Please click on your preferred show time or select a date.
+            </h1>
         <div id="body5">
             <div class="row3">
                 <table>

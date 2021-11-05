@@ -2,10 +2,6 @@
     session_start();
     $id=session_id();
 
-//   if (!isset($_SESSION['cart'])) {
-//     $_SESSION['cart'] = array();
-//   }
-
 $customerName=$_POST['customerName'];
 $customerEmail=$_POST['customerEmail'];
 $customerNumber=$_POST['customerNumber'];
@@ -59,11 +55,11 @@ for ($i=0; $i < $rowNumDate; $i++){
     $rowDate = $resultDate -> fetch_assoc();
     array_push($arrayDate,$rowDate);
 }
-print_r($arrayDate);
+// print_r($arrayDate);
 $confirmDay = $arrayDate[0]['day'];
 $confirmTime = $arrayDate[0]['time'];
-echo $confirmDay;
-echo $confirmTime;
+// echo $confirmDay;
+// echo $confirmTime;
 
 
 

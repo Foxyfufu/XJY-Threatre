@@ -126,6 +126,8 @@
                     type="text" 
                     name="customerName" 
                     required
+                    id="name"
+                    onchange="validateName()"
                     style="width:300px">
                     <br><br>
 
@@ -134,6 +136,8 @@
                     type="email" 
                     name="customerEmail" 
                     required
+                    id="email"
+                    onchange="validateEmail()"
                     style="width:300px">
                     <br><br>
 
@@ -142,6 +146,8 @@
                     type="text" 
                     name="customerNumber" 
                     required
+                    id="number"
+                    onchange="validateNumber()"
                     style="width:150px"
                     pattern="\d*"
                     maxlength="8">
@@ -174,6 +180,6 @@
             </div>
         </footer>
     </div>
-    <!-- <script src="payment.js"></script> -->
+    <script src="payment.js"></script>
 </body>
 </html>
