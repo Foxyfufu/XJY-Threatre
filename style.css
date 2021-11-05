@@ -617,7 +617,7 @@ h5 {
   font-size: x-large;
   width: 80%;
   margin-left: 10%;
-  color:#3F0071;
+  color:purple;
 }
 
 #computePrice {
@@ -643,18 +643,39 @@ h5 {
 .paymentLabel {
   display: inline-block;
   width: 120px;
-  text-align: right;
   margin-right: 30px;
   margin-bottom: 10px;
+  text-align: left;
 }
 
 #paymentInfo {
-  margin-left: 15%;
+  margin-left: 10%;
+  text-align: left;
 }
 
 #paymentDescription{
-  margin-left: 15%;
-  font-size: small;
+  margin-left: 10%;
+  color: royalblue;
+}
+
+.paymentButton{
+  margin-top: 30px;
+}
+
+#clear{
+  width: 85px;
+  height: 40px;
+  text-align: center;
+  font-size: 10px;
+}
+
+#confirmation{
+  width: 85px;
+  height: 40px;
+  margin-left: 15px;
+  position: relative;
+  text-align: center;
+  font-size: 10px;
 }
 
 /* Style the tab */

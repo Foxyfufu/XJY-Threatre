@@ -43,7 +43,7 @@
     }
 
     $pricePayment = count($specificArray) * 17;
-    $totalPayment = $pricePayment + 2.5;
+    $totalPayment = $pricePayment + 2;
 ?>
 
 <!DOCTYPE html>
@@ -82,7 +82,7 @@
 
             <div id="paymentDescription">
                 <p>Movie: <?php echo $arrayMovie[0]['movieName'];?></p>
-                <p>Showing on: <?php echo $array[0]['day']; echo $array[0]['time'];?></p>
+                <p>Showing on: <?php echo $array[0]['day']; echo "&nbsp"; echo $array[0]['time'];?></p>
                 <p>Showing at: Raffles City Threatre Gold Class Deluxe
                 <p>Seat Number(s): <?php echo $specific;?></p>
             </div>
@@ -105,7 +105,7 @@
 
                     <tr>
                         <td colspan = "3" style="text-align: right">Booking Fee:</td>
-                        <td> $2.50</td>
+                        <td> $2</td>
                     </tr>
 
                     <tr>
@@ -154,9 +154,11 @@
                     required
                     style="width:200px">
                     <br><br>
-
-                    <input type="reset" id="clear" value="Cancel">
-                    <input type="submit" id="confirm" value="Confirm Order">
+                    
+                    <div class = "paymentButton">
+                        <input type="reset" id="clear" value="Reset">
+                        <input type="submit" id="confirmation" value="Confirm Order">
+                    </div>
                 </form>
             </div>
             

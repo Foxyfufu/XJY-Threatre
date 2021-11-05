@@ -39,20 +39,48 @@ else {
 echo "An error has occurred.  The item was not added.";
 }
 
+$queryMovie = "SELECT movieName FROM movieTable INNER JOIN slotTable ON movieTable.movieID = slotTable.movieID WHERE slotID=$confirmSlot";
+$resultMovie = $db -> query($queryMovie);
+$rowNumMovie = $resultMovie->num_rows;
+$array = array();
+    for ($i=0; $i < $rowNumMovie; $i++){
+        $rowMovie = $resultMovie -> fetch_assoc();
+        array_push($array,$rowMovie);
+    }
+// print_r($rowMovie);
+$confirmMovie = $rowMovie['movieName'];
+// echo $confirmMovie;
+
+$queryDate = "SELECT day, time FROM slotTable WHERE slotID=$confirmSlot";
+$resultDate = $db -> query($queryDate);
+$rowNumDate = $resultDate -> num_rows;
+$arrayDate = array();
+for ($i=0; $i < $rowNumDate; $i++){
+    $rowDate = $resultDate -> fetch_assoc();
+    array_push($arrayDate,$rowDate);
+}
+print_r($arrayDate);
+$confirmDay = $arrayDate[0]['day'];
+$confirmTime = $arrayDate[0]['time'];
+echo $confirmDay;
+echo $confirmTime;
+
+
+
 foreach ($confirmSeatsArray as $key => $value) {
     $queryUpdate = "UPDATE seatsTable SET availability='No' WHERE slotID=$confirmSlot AND seatNumber=\"$confirmSeatsArray[$key]\"";
     $resultUpdate = $db -> query($queryUpdate);
 }
-// $to      = 'f32ee@localhost';
-//     $subject = 'Order Confirmed!';
-//     $message = "Thank you for choosing XJY Threatre. Please show this E-Ticket to our staff on the day of the movie.
-//     \nName: {$???} \nMovie Name: {$???} \n Date: {$???} \n Seat Number: {$???}
-//     \nWe look forward to seeing you."
-//     $headers = 'From: f32ee@localhost' . "\r\n" .
-//         'Reply-To: f32ee@localhost' . "\r\n" .
-//         'X-Mailer: PHP/' . phpversion();
+$to      = 'f32ee@localhost';
+    $subject = 'Order Confirmed!';
+    $message = "Thank you for choosing XJY Threatre. Please show this E-Ticket to our staff on the day of the movie.
+    \nName: {$customerName} \nMovie Name: {$confirmMovie} \n Day: {$confirmDay} \n Time: {$confirmTime} \n Seat Number: {$confirmSeats}
+    \nWe look forward to seeing you.";
+    $headers = 'From: f32ee@localhost' . "\r\n" .
+        'Reply-To: f32ee@localhost' . "\r\n" .
+        'X-Mailer: PHP/' . phpversion();
 
-//     mail($to, $subject, $message, $headers,'-ff32ee@localhost');
+    mail($to, $subject, $message, $headers,'-ff32ee@localhost');
 ?>
 
 
